@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".LaporanActivity">
+
+    <TextView
+        android:id="@+id/textTitleLaporan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="20dp"
+        android:text="Laporan Harian"/>
+
+    <TextView
+        android:id="@+id/textTanggalLaporan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="20dp"
+        android:text="Tanggal Laporan"/>
+
+    <EditText
+        android:id="@+id/edit_laporanTelur"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="50dp"
+        android:hint="Masukan Jumlah Telur"/>
+
+    <EditText
+        android:id="@+id/edit_laporanKematian"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="50dp"
+        android:hint="Masukan Jumlah Kematian"/>
+
+    <Button
+        android:id="@+id/btn_submitPendapatan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="50dp"
+        android:text="Submit" />
+</LinearLayout>
