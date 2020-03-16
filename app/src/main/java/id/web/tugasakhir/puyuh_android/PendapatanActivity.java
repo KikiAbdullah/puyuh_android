@@ -22,7 +22,7 @@ import java.util.Date;
 public class PendapatanActivity extends AppCompatActivity {
     private String tanggal;
     private EditText editTelur, editHarga;
-    private TextView textTotal;
+    private TextView textTotal, textDate;
     private Button btnSubmitPendapatan;
     DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
     Date date = new Date();
@@ -33,10 +33,12 @@ public class PendapatanActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pendapatan);
-
+        Date today = new Date();
         editTelur = findViewById(R.id.edit_telur);
         editHarga = findViewById(R.id.edit_harga);
+        textDate = findViewById(R.id.textDate);
         textTotal = findViewById(R.id.textTotal);
+        textDate.setText(today+ "");
         btnSubmitPendapatan = findViewById(R.id.btn_submitPendapatan);
 
         btnSubmitPendapatan.setOnClickListener(new View.OnClickListener() {
@@ -52,9 +54,13 @@ public class PendapatanActivity extends AppCompatActivity {
         String jmlTelur = editTelur.getText().toString().trim();
         String jmlHarga = editHarga.getText().toString().trim();
         String totalHarga = Integer.parseInt(jmlTelur) * Integer.parseInt(jmlHarga) + "";
+        textTotal.setText(totalHarga);
 
-        PendapatanService kandangService = ApiClient.getRetrofitInstance().create(PendapatanService.class);
-        Call<PendapatanData> call = kandangService.addPendapatan(
+        String idUser = 1 + "";
+
+        PendapatanService pendapatanService = ApiClient.getRetrofitInstance().create(PendapatanService.class);
+        Call<PendapatanData> call = pendapatanService.addPendapatan(
+                idUser,
                 tanggal,
                 jmlTelur,
                 jmlHarga,
@@ -74,12 +80,5 @@ public class PendapatanActivity extends AppCompatActivity {
             }
         });
 
-    }
-
-    private void initView(){
-        editTelur = findViewById(R.id.edit_telur);
-        editHarga = findViewById(R.id.edit_harga);
-        textTotal = findViewById(R.id.textTotal);
-        btnSubmitPendapatan = findViewById(R.id.btn_submitPendapatan);
     }
 }

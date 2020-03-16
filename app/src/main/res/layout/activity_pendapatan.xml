@@ -16,29 +16,36 @@
         android:layout_marginBottom="20dp"
         android:text="Pendapatan Harian"/>
 
+    <TextView
+        android:id="@+id/textDate"
+        android:layout_width="127dp"
+        android:layout_height="38dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp" />
+
     <EditText
         android:id="@+id/edit_telur"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginBottom="50dp"
-        android:hint="Masukan Jumlah Telur (Kg)"/>
+        android:layout_marginBottom="20dp"
+        android:hint="Masukan Jumlah Telur (Kg)" />
 
     <EditText
         android:id="@+id/edit_harga"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginBottom="50dp"
-        android:hint="Masukan Harga Telur per Kg (Rp)"/>
+        android:layout_marginBottom="20dp"
+        android:hint="Masukan Harga Telur per Kg (Rp)" />
 
     <TextView
         android:id="@+id/textTotal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginBottom="50dp"
-        android:text="Total Pemasukan : Rp. 00000"/>
+        android:layout_marginBottom="20dp"
+        android:text="Total Pemasukan : Rp. 00000" />
 
     <Button
         android:id="@+id/btn_submitPendapatan"
@@ -47,4 +54,7 @@
         android:layout_gravity="center"
         android:layout_marginBottom="50dp"
         android:text="Submit" />
+
+
+
 </LinearLayout>

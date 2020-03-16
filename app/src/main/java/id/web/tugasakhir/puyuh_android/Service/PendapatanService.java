@@ -10,10 +10,10 @@ public interface PendapatanService {
     @FormUrlEncoded
     @POST("pendapatanHarian")
     Call<PendapatanData> addPendapatan(
-//            @Field("id_user") String idUser,
+            @Field("id_user") String idUser,
             @Field("tanggal") String tanggal,
-            @Field("harga") String harga,
             @Field("jumlah") String jumlah,
+            @Field("harga") String harga,
             @Field("total") String total
 //            @Field("created_at") String createdAt,
 //            @Field("updated_at") String updatedAt

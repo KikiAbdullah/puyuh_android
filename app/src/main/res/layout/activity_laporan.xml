@@ -8,29 +8,36 @@
     tools:context=".LaporanActivity">
 
     <TextView
-        android:id="@+id/textTitleLaporan"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="50dp"
-        android:layout_marginBottom="20dp"
-        android:text="Laporan Harian"/>
-
-    <TextView
         android:id="@+id/textTanggalLaporan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="50dp"
         android:layout_marginBottom="20dp"
-        android:text="Tanggal Laporan"/>
+        android:text="Tanggal Laporan" />
+
+    <TextView
+        android:id="@+id/textTitleLaporan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:text="Laporan Harian" />
+
+    <EditText
+        android:id="@+id/edit_kandang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:hint="Nomor Kandang" />
 
     <EditText
         android:id="@+id/edit_laporanTelur"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginBottom="50dp"
+        android:layout_marginTop="25dp"
         android:hint="Masukan Jumlah Telur"/>
 
     <EditText
@@ -38,14 +45,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginBottom="50dp"
+        android:layout_marginTop="25dp"
         android:hint="Masukan Jumlah Kematian"/>
 
     <Button
-        android:id="@+id/btn_submitPendapatan"
+        android:id="@+id/btn_submitLaporan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginBottom="50dp"
+        android:layout_marginTop="25dp"
         android:text="Submit" />
+
 </LinearLayout>
